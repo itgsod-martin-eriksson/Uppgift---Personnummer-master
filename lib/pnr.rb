@@ -24,6 +24,10 @@ def valid_pnr?(pnr:)
     end
     sum = sum + value
   end
-  if sum % 
-      binding.pry
+
+  if (sum + checksum) % 10 == 0
+    return true
+  else false
 end
+end
+
