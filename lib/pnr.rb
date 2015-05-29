@@ -9,9 +9,21 @@ def valid_pnr?(pnr:)
   pnr = pnr.split('').map { |s| s.to_i }
   pnr.delete_at(6)
 
+  checksum = pnr.pop
 
-  # binding.pry
+  sum = 0
 
-
-
+  pnr.each_with_index do |digit,index |
+    if index % 2 == 0
+      value = digit * 2
+      if value > 9
+        value = value - 9
+      end
+    else
+      value = digit
+    end
+    sum = sum + value
+  end
+  if sum % 
+      binding.pry
 end
