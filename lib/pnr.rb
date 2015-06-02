@@ -27,7 +27,7 @@ def valid_pnr?(pnr:)
 
   if (sum + checksum) % 10 == 0
     return true
-  else false
+  else return false
 end
 end
 
